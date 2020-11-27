@@ -1,0 +1,84 @@
+* {
+  font-family: "Montserrat";
+  word-break: break-all;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#main-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  padding: 50px;
+}
+
+#main-container .card-container {
+  position: relative;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-position: center;
+  cursor: pointer;
+}
+
+#main-container .card-container .icon {
+  position: absolute;
+  right: 0;
+  bottom: 13%;
+  z-index: 100;
+  padding: 10px;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  fill: #fff;
+}
+
+#main-container .card-container .card {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(63, 94, 251, 0.5)), color-stop(80%, rgba(252, 70, 107, 0))) !important;
+  background-image: linear-gradient(90deg, rgba(63, 94, 251, 0.5) 0%, rgba(252, 70, 107, 0) 80%) !important;
+}
+
+#main-container .card-container .card .case-number {
+  display: inline;
+  color: #fff;
+  font-size: 2em;
+}
+
+#main-container .card-container .card h2 {
+  padding-left: 10px;
+  display: inline;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: bolder;
+}
+
+#main-container .card-container:hover {
+  -webkit-transition: 1s;
+  transition: 1s;
+  background: white;
+}
+
+#main-container .card-container:hover .icon {
+  -webkit-transition: 1s;
+  transition: 1s;
+  width: 70px;
+  height: 70px;
+}
